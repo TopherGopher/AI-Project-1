@@ -4,6 +4,74 @@
 		"selected_items":
 		[
 			[
+				"vis",
+				"visitedStates"
+			],
+			[
+				"visited",
+				"visitedStates"
+			],
+			[
+				"succ",
+				"successor"
+			],
+			[
+				"els",
+				"else	else"
+			],
+			[
+				"el",
+				"else	else"
+			],
+			[
+				"var",
+				"variables"
+			],
+			[
+				"Sear",
+				"SearchAgent"
+			],
+			[
+				"dic",
+				"dictionary"
+			],
+			[
+				"getc",
+				"getcwd"
+			],
+			[
+				"mod",
+				"modules"
+			],
+			[
+				"current",
+				"currentState"
+			],
+			[
+				"recursive",
+				"recursiveDFS"
+			],
+			[
+				"success",
+				"successor"
+			],
+			[
+				"NORTH",
+				"North"
+			],
+			[
+				"__",
+				"__getattr__	magic"
+			],
+			[
+				"get",
+				"__getattr__	magic"
+			],
+			[
+				"d",
+				"Directions"
+			],
+			[
 				"file",
 				"filenames"
 			],
@@ -16,10 +84,6 @@
 				"chdir"
 			],
 			[
-				"d",
-				"dir"
-			],
-			[
 				"_",
 				"__file__"
 			]
@@ -27,52 +91,184 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "search.py",
-			"settings":
-			{
-				"buffer_size": 5522,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "searchAgents.py",
-			"settings":
-			{
-				"buffer_size": 21815,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{\n    \"cmd\": [\"python\", $\"project_path\", \"\"],\n    \"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-9]*)\",\n    \"selector\": \"source.python\"\n}",
-			"file": "/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/AIP1.sublime-build",
-			"file_size": 135,
-			"file_write_time": 130245043980000000,
-			"settings":
-			{
-				"buffer_size": 137,
-				"line_ending": "Unix",
-				"name": "AIP1.sublime-build"
-			}
-		}
 	],
 	"build_system": "Packages/User/AIP1.sublime-build",
 	"command_palette":
 	{
-		"height": 225.0,
+		"height": 115.0,
 		"selected_items":
 		[
 			[
-				"python",
-				"SublimeREPL: Python - Sublime Text Console"
+				"search",
+				"File: Search Files"
+			],
+			[
+				"preferences",
+				"Preference Helper: Open *.sublime-settings"
+			],
+			[
+				"preferences ",
+				"Preference Helper: Open *.sublime-settings"
+			],
+			[
+				"prefer",
+				"Preference Helper: Open *.sublime-settings"
+			],
+			[
+				"preference",
+				"Preference Helper: Open *.sublime-settings"
+			],
+			[
+				"pacage",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git:stat",
+				"Git: Status"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"panel",
+				"Origami: Move File to Pane on the Left"
+			],
+			[
+				"origami file right",
+				"Origami: Create Pane with File on the Right"
 			],
 			[
 				"repl",
 				"SublimeREPL: Python"
 			],
 			[
+				"disable",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"preference ",
+				"Preference Helper: Open *.sublime-settings"
+			],
+			[
+				"ori right",
+				"Origami: Create Pane with File on the Right"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"rep",
+				"SublimeREPL: Shell"
+			],
+			[
 				"repl py",
-				"SublimeREPL: Python - virtualenv"
+				"SublimeREPL: Python - Sublime Text Console"
+			],
+			[
+				"termin",
+				"Edit Preference: sublime-completions"
+			],
+			[
+				"python",
+				"SublimeREPL: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"origami right",
+				"Origami: Create Pane with File on the Right"
+			],
+			[
+				"orig",
+				"Origami: Zoom Current Pane"
+			],
+			[
+				"sublimelint",
+				"Preferences: SublimeLint Settings – User"
+			],
+			[
+				"lint",
+				"Preferences: SublimeLint Settings – Default"
+			],
+			[
+				"diagr",
+				"Diagram: Generate Diagrams for Active View"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git ",
+				"Git: Diff"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"pref",
+				"Edit Preference: Theme"
+			],
+			[
+				"theme",
+				"Edit Preference: Theme"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax",
+				"Set Syntax: Python"
+			],
+			[
+				"build",
+				"Build: Big Maze"
+			],
+			[
+				"indentation",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"preferenc",
+				"Edit Preference: List Settings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
 			],
 			[
 				"run",
@@ -91,10 +287,6 @@
 				"Git-flow: Feature Start"
 			],
 			[
-				"git stat",
-				"Git: Quick Status"
-			],
-			[
 				"le",
 				"Legit: Branches"
 			],
@@ -107,14 +299,6 @@
 				"Package Control: Upgrade/Overwrite All Packages"
 			],
 			[
-				"package",
-				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"git che",
 				"Git: Checkout"
 			],
@@ -123,20 +307,12 @@
 				"Git: Checkout"
 			],
 			[
-				"ind",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"cons",
 				"Set Syntax: R Console"
 			],
 			[
 				"consol",
 				"Set Syntax: R Console"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
 			],
 			[
 				"git flow in",
@@ -183,14 +359,6 @@
 				"Floobits - Join Workspace"
 			],
 			[
-				"packa",
-				"Package Control: Install Package"
-			],
-			[
-				"preferences",
-				"Preferences: Browse Packages"
-			],
-			[
 				"preferen",
 				"Preferences: Settings - Default"
 			],
@@ -203,11 +371,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 476.0
+		"width": 615.0
 	},
 	"console":
 	{
-		"height": 395.0,
+		"height": 393.0,
 		"history":
 		[
 			"`clear",
@@ -226,20 +394,40 @@
 	},
 	"file_history":
 	[
-		"/Users/Spencer/Documents/School/Intro To AI/search/search.sublime-build",
-		"/Users/Spencer/Documents/School/Intro To AI/search/.sublime-build.json",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/Spencer/Documents/School/Intro To AI/search/pacman.py",
+		"/Users/Spencer/Documents/School/Intro To AI/search/search.py",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Sublimerge Pro/Sublimerge.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Sublimerge Pro/Custom Comparisons.sublime-settings",
+		"/Users/Spencer/Documents/School/Intro To AI/search/commands.txt",
+		"/Users/Spencer/Documents/School/Intro To AI/search/searchAgents.py",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL (OSX).sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Installed Packages/Python Auto-Complete.sublime-package/Python.sublime-completions",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Cheat Sheets/cheat-sheets/Sublime Text.cheatsheet",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/sublimelint/SublimeLint.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/SublimeLint.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/sublime_diagram_plugin/README.txt",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/AIP1.sublime-build",
+		"/Applications/Sublime Text.app/Contents/MacOS/Packages/Theme - Default.sublime-package/Default.sublime-theme",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Soda.sublime-package/Soda Dark 3.sublime-theme",
+		"/Users/Spencer/Documents/School/Intro To AI/search/search.sublime-project",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Default/Preferences (OSX).sublime-settings",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Spencer/Documents/School/Intro To AI/search/search.sublime-build",
+		"/Users/Spencer/Documents/School/Intro To AI/search/.sublime-build.json",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SideBarGit/SideBarGit.sublime-settings",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/Gist.sublime-settings",
 		"/Users/Spencer/.floorc",
 		"/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/CHANGELOG"
@@ -253,6 +441,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"/Users/Spencer/Library/Application Support/Sublime Text 3"
 		]
 	},
 	"find_state":
@@ -260,6 +449,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"borys",
+			"pacman",
+			"pacman.py",
+			"agentIndex",
+			"direction",
+			"indent",
+			"tab",
+			"super+m",
 			"file",
 			"ctrl+s",
 			"ctrl+f",
@@ -289,551 +486,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "search.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5522,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2541,
-								2541
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close"
-							],
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sublime_auto_complete": true,
-							"synced": false,
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1021.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "searchAgents.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21815,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3984,
-								3984
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close"
-							],
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sublime_auto_complete": true,
-							"synced": false,
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1427.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "/Users/Spencer/Library/Application Support/Sublime Text 3/Packages/User/AIP1.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 137,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								38
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close"
-							],
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"incomplete_sync": null,
-							"sublime_auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -854,18 +508,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -877,7 +524,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 102.0
+		"height": 359.0
 	},
 	"output.git-commit":
 	{
@@ -902,7 +549,7 @@
 	"project": "search.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

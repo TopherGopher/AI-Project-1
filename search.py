@@ -95,46 +95,62 @@ def depthFirstSearch(problem):
 	
 	"*** YOUR CODE HERE ***"
 
-	import pdb
-	pdb.set_trace()
+	# import pdb
+	# pdb.set_trace()
 
 
 	path = []
 
-	result = recursiveDFS(problem, path)
+	result = recursiveDFS(problem, None, None)
+
+	result.reverse()
 
 	return result
 
 	util.raiseNotDefined()
 
-
-
-def recursiveDFS(problem, path):
+def recursiveDFS(problem, state, visitedStates):
 
 	# print "Problem: " + str(problem) + "  Path: " + str(path)
 
-	if len(path) == 0:
+	if visitedStates == None:
+		visitedStates = []
+
+	if state == None:
 		currentState = problem.getStartState()
 	else:
-		currentState = path[len(path) - 1][0]
+		currentState = state[0]
+	
 
 	if problem.isGoalState(currentState):
-		return path
+		return [state[1]]
 
 	successors = problem.getSuccessors(currentState)
 
-	for successor in successors:
+	if successors == None or len(successors) == 1 or (currentState in visitedStates):
+		return None
+	else:
 
-		path.append(successor)
+		result = None
 
-		result = recursiveDFS(problem, path)
+		visitedStates.append(currentState)
+
+		for successor in successors:
+
+			result = recursiveDFS(problem, successor, visitedStates)
 		
-		if result:
-			return result;
-		else:
-			path.pop()
+			if result:
 
-	return None
+				if state:
+					result.append(state[1])
+
+				# print "Result: " + str(result)
+
+				break
+
+		visitedStates.pop()
+
+	return result
 
 
 		# if problem.isGoalState(startState):
