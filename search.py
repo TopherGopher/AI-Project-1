@@ -190,38 +190,66 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 	util.raiseNotDefined()
 
 
-class Node:
-	d = 0
-	def __init__(self, state, depth):
-		self.s = state
-		self.d = depth
+class Tree:
+	
+	def __init__(self, rootValue):
+		self.root = None
+		self.root = Node(self, rootValue)
 
 	def __str__(self):
-		return str(self.s) + ' ' + str(self.d)
-	def __unicode__(self):
-		return u'a'
-	def __repr__(self):
-		return str(self.s)+' '+str(self.d)
+			return self.root.visualize()
 
-	def getDirection(self):
-		from game import Directions
-		if self.s[1] == 'North':
-			return Directions.NORTH
-		elif self.s[1] == 'East':
-			return Directions.EAST    
-		elif self.s[1] == 'South':
-			return Directions.SOUTH
-		elif self.s[1] == 'West':
-			return Directions.WEST
+class Node:
+	
+	def __init__(self, parent, value):
+		if isinstance(parent, Tree):
+			self.initializer(parent, None, value, 0)
 		else:
-			return 0    
+			self.initializer(parent.tree, parent, value, parent.depth + 1)
 
-	def getCoordinates(self, problem):
-		if self.s != problem.getStartState():
-			return self.s[0]
-		else:
-			return self.s
 
+	def initializer(self, tree, parent, value, depth):
+		self.tree = tree
+		self.value = value
+		self.depth = depth
+		self.children = []
+
+		if parent:
+			parent.addChildNode(self)
+
+
+	def addChildNode(self, node):
+		assert node.depth == self.depth + 1, "Child node depth is" + node.depth + " and can't be added to node with depth " + self.depth
+
+		node.parent = self
+		self.children.append(node)
+	
+
+	def visualize(self):
+		rep = str(self)
+
+		indent = '--->'
+
+		rep += indent
+
+		for child in self.children:
+			rep += indent
+
+			rep += child.visualize()
+
+			# rep += '\n'
+
+		return rep + '\n'
+
+
+	def __str__(self):
+			return 'Node(Depth:' + str(self.depth) + '   Value:' + str(self.value) + ')\n'
+
+	# def __unicode__(self):
+	# 	return u'a'
+
+	# def __repr__(self):
+	# 	return str(self.s)+' '+str(self.d)
 #def inPath(tempState, path):
 #    for state in path:
 #        if state[0] == tempState[0]:
