@@ -173,28 +173,29 @@ def breadthFirstSearch(problem):
 	util.raiseNotDefined()
 
 def uniformCostSearch(problem):
+    print problem.getStartState()
     "Search the node of least total cost first. "
     pq = util.PriorityQueue()
     #Insert the root into the queue
-    root = Node(problem.getStartState())
-    pq.push(root, priority)
+    root = ([], problem.getStartState(), 0)
+    pq.push(root, 0)
+    closed = []
     #While the queue is not empty
-    while(!pq.isEmpty()):
+    while not pq.isEmpty():
     #  Dequeue the maximum priority element from the queue
-        tempNode = pq.pop()
+        (actions, node, totalCost) = pq.pop()
     #  (If priorities are same, alphabetically smaller path is chosen)
 
     #  If the path is ending in the goal state, print the path and exit
-        if problem.isGoalState(tempNode.s):
-            return path
-    #  Else
-        else:
+        if problem.isGoalState(node):
+            return actions
+        if not node in closed:
+            closed.append(node)
     #       Insert all the children of the dequeued element, with the cumulative costs as priority
-            successors = problem.getSuccessors()
-            for successor in successors:
-                n = Node(successor)
-                pq.push(n, priority)
-
+            successors = problem.getSuccessors(node)
+            for (child, action, cost) in successors:
+                if not child in closed:
+                    pq.push((actions + [action], child, cost+totalCost), totalCost+cost)
     util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
