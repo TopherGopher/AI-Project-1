@@ -184,8 +184,7 @@ def uniformCostSearch(problem):
     while not pq.isEmpty():
     #  Dequeue the maximum priority element from the queue
         (actions, node, totalCost) = pq.pop()
-    #  (If priorities are same, alphabetically smaller path is chosen)
-
+        
     #  If the path is ending in the goal state, print the path and exit
         if problem.isGoalState(node):
             return actions
@@ -196,7 +195,6 @@ def uniformCostSearch(problem):
             for (child, action, cost) in successors:
                 if not child in closed:
                     pq.push((actions + [action], child, cost+totalCost), totalCost+cost)
-    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
 	"""
