@@ -173,8 +173,7 @@ def breadthFirstSearch(problem):
 	util.raiseNotDefined()
 
 def uniformCostSearch(problem):
-    print problem.getStartState()
-    "Search the node of least total cost first. "
+    #Search the node of least total cost first.
     pq = util.PriorityQueue()
     #Insert the root into the queue
     root = ([], problem.getStartState(), 0)
@@ -184,7 +183,7 @@ def uniformCostSearch(problem):
     while not pq.isEmpty():
     #  Dequeue the maximum priority element from the queue
         (actions, node, totalCost) = pq.pop()
-        
+
     #  If the path is ending in the goal state, print the path and exit
         if problem.isGoalState(node):
             return actions
