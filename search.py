@@ -185,9 +185,30 @@ def nullHeuristic(state, problem=None):
 	return 0
 
 def aStarSearch(problem, heuristic=nullHeuristic):
-	"Search the node that has the lowest combined cost and heuristic first."
-	"*** YOUR CODE HERE ***"
-	util.raiseNotDefined()
+    "Search the node that has the lowest combined cost and heuristic first."
+    import searchAgents
+    node = ((problem.getStartState(),'',0),[],0)
+    explored = []
+    path = []
+    fringe = []
+    fringe.append(node)
+
+    while not problem.isGoalState(node[0][0]):
+      
+        for i in problem.getSuccessors(node[0][0]):
+            if i[0] not in explored:
+                tmpPath = node[1][:]
+                tmpPath.append(i[1])
+                fringe.append(((i), tmpPath,node[2]+i[2]))
+                fringe = sorted(fringe, key=lambda fringe:( fringe[0][2] + searchAgents.manhattanHeuristic(fringe[0][0],problem)))
+              
+        explored.append(node[0][0])
+        fringe.remove(node)
+        if len(fringe) == 0:
+            break
+        node = fringe[0]
+      
+    return node[1]
 
 
 class Tree:
