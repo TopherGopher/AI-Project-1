@@ -177,7 +177,7 @@ def uniformCostSearch(problem):
     pq = util.PriorityQueue()
     #Insert the root into the queue
     root = Node(problem.getStartState())
-    pq.push(root)
+    pq.push(root, priority)
     #While the queue is not empty
     while(!pq.isEmpty()):
     #  Dequeue the maximum priority element from the queue
@@ -193,7 +193,7 @@ def uniformCostSearch(problem):
             successors = problem.getSuccessors()
             for successor in successors:
                 n = Node(successor)
-                pq.push(n)
+                pq.push(n, priority)
 
     util.raiseNotDefined()
 
