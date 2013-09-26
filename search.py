@@ -95,11 +95,9 @@ def depthFirstSearch(problem):
 	
 	"*** YOUR CODE HERE ***"
 
-	# import pdb
-	# pdb.set_trace()
+	import pdb
+	pdb.set_trace()
 
-
-	path = []
 
 	result = recursiveDFS(problem, None, None)
 
@@ -166,11 +164,13 @@ def recursiveDFS(problem, state, visitedStates):
 		# 			return result
 
 def breadthFirstSearch(problem):
-	"""
-	Search the shallowest nodes in the search tree first.
-	"""
-	"*** YOUR CODE HERE ***"
-	util.raiseNotDefined()
+	return None
+
+
+def recursiveBFS(problem, tree):
+	return None
+	
+
 
 def uniformCostSearch(problem):
     #Search the node of least total cost first.
@@ -231,12 +231,29 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
 class Tree:
 	
-	def __init__(self, rootValue):
+	def __init__(self, rootValue = None):
 		self.root = None
 		self.root = Node(self, rootValue)
 
 	def __str__(self):
 			return self.root.visualize()
+
+	def hasNode(self, node):
+		allChildren = self.getAllChildrenOf()
+
+		return node in allChildren
+		
+
+	def getAllChildrenOf(self, node = None):
+		if node == None:
+			return [self.root].append(self.getAllChildrenOf(self.root))
+		else:
+			result = []
+
+			for child in node.children:
+				result.append(self.getAllChildrenOf(child))
+
+			return result
 
 class Node:
 	
