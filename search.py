@@ -22,7 +22,7 @@ In search.py, you will implement generic search algorithms which are called
 by Pacman agents (in searchAgents.py).
 """
 
-import util
+import util, copy
 
 class SearchProblem:
 	"""
@@ -222,29 +222,42 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
-    import searchAgents
-    node = ((problem.getStartState(),'',0),[],0)
-    explored = []
-    path = []
-    fringe = []
-    fringe.append(node)
 
-    while not problem.isGoalState(node[0][0]):
-      
-        for i in problem.getSuccessors(node[0][0]):
-            if i[0] not in explored:
-                tmpPath = node[1][:]
-                tmpPath.append(i[1])
-                fringe.append(((i), tmpPath,node[2]+i[2]))
-                fringe = sorted(fringe, key=lambda fringe:( fringe[0][2] + searchAgents.manhattanHeuristic(fringe[0][0],problem)))
-              
-        explored.append(node[0][0])
-        fringe.remove(node)
-        if len(fringe) == 0:
-            break
-        node = fringe[0]
-      
-    return node[1]
+    import pdb
+    pdb.set_trace()
+
+    path = []
+    node = (problem.getStartState(), path, 0)
+
+    visited = [node[0]]
+
+    fringe = util.PriorityQueue()
+
+    fringe.push(node, 1)
+
+    while not fringe.isEmpty():
+
+    	(position, path, cost) = fringe.pop()
+
+    	print "Pos:"+str(position)+" Cost:"+str(cost)+"\n"
+
+    	if problem.isGoalState(position):
+    		return path
+    	else:
+    		successors = copy.copy(problem.getSuccessors(position))
+
+    		for successor in successors:
+
+    			newPosition = successor[0]
+
+    			if not newPosition in visited:
+    				newPath = path[:] + [successor[1]]
+
+    				newCost = cost + heuristic(newPosition, problem)
+
+    				visited.append(newPosition)
+
+    				fringe.push((newPosition, newPath, newCost), newCost)
 
 
 class Tree:
