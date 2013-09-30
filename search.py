@@ -95,8 +95,8 @@ def depthFirstSearch(problem):
 	
 	"*** YOUR CODE HERE ***"
 
-	import pdb
-	pdb.set_trace()
+	# import pdb
+	# pdb.set_trace()
 
 
 	result = recursiveDFS(problem, None, None)
@@ -151,24 +151,46 @@ def recursiveDFS(problem, state, visitedStates):
 	return result
 
 
-		# if problem.isGoalState(startState):
-		# 	return path
-		# else:
-		# 	return None
-		# else:
-		# 	for successor in successors:
-		# 		newPath = list(path)
-		# 		newPath.append(successor[1])
-		# 		result = recursiveDFS(successor, newPath)
-		# 		if result:
-		# 			return result
-
 def breadthFirstSearch(problem):
-	return None
+
+	# import pdb
+	# pdb.set_trace()
+	
+	startState = problem.getStartState()
+
+	result = []
+	visited = []
+	fringe = util.PriorityQueue()
+
+	successors = problem.getSuccessors(startState)
+
+	for successor in successors:
+		fringe.push( (successor[0], [successor[1]], 1) , 1)
+
+	visited.append(startState)
 
 
-def recursiveBFS(problem, tree):
-	return None
+	(nextState, actions, depth) = fringe.pop()
+
+	while not problem.isGoalState(nextState):
+
+		if not nextState in visited:
+			visited.append(nextState)
+
+			successors = problem.getSuccessors(nextState)
+
+			for successor in successors:
+				fringe.push( (successor[0], actions + [successor[1]], depth+1) , depth+1)
+
+
+		(nextState, actions, depth) = fringe.pop()
+
+	return actions
+
+
+
+
+	
 	
 
 
