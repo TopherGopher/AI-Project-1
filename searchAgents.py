@@ -499,6 +499,8 @@ def foodHeuristic(state, problem):
 	"""
 	position, foodGrid = state
 	"*** YOUR CODE HERE ***"
+	# import pdb
+	# pdb.set_trace()
 
 	distances = []
 	foodList = foodGrid.asList()
