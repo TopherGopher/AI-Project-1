@@ -99,8 +99,6 @@ def depthFirstSearch(problem):
 	# pdb.set_trace()
 
 
-	path = []
-
 	result = recursiveDFS(problem, None, None)
 
 	result.reverse()
@@ -153,24 +151,48 @@ def recursiveDFS(problem, state, visitedStates):
 	return result
 
 
-		# if problem.isGoalState(startState):
-		# 	return path
-		# else:
-		# 	return None
-		# else:
-		# 	for successor in successors:
-		# 		newPath = list(path)
-		# 		newPath.append(successor[1])
-		# 		result = recursiveDFS(successor, newPath)
-		# 		if result:
-		# 			return result
-
 def breadthFirstSearch(problem):
-	"""
-	Search the shallowest nodes in the search tree first.
-	"""
-	"*** YOUR CODE HERE ***"
-	util.raiseNotDefined()
+
+	# import pdb
+	# pdb.set_trace()
+	
+	startState = problem.getStartState()
+
+	result = []
+	visited = []
+	fringe = util.PriorityQueue()
+
+	successors = problem.getSuccessors(startState)
+
+	for successor in successors:
+		fringe.push( (successor[0], [successor[1]], 1) , 1)
+
+	visited.append(startState)
+
+
+	(nextState, actions, depth) = fringe.pop()
+
+	while not problem.isGoalState(nextState):
+
+		if not nextState in visited:
+			visited.append(nextState)
+
+			successors = problem.getSuccessors(nextState)
+
+			for successor in successors:
+				fringe.push( (successor[0], actions + [successor[1]], depth+1) , depth+1)
+
+
+		(nextState, actions, depth) = fringe.pop()
+
+	return actions
+
+
+
+
+	
+	
+
 
 def uniformCostSearch(problem):
     #Search the node of least total cost first.
@@ -231,12 +253,29 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
 class Tree:
 	
-	def __init__(self, rootValue):
+	def __init__(self, rootValue = None):
 		self.root = None
 		self.root = Node(self, rootValue)
 
 	def __str__(self):
 			return self.root.visualize()
+
+	def hasNode(self, node):
+		allChildren = self.getAllChildrenOf()
+
+		return node in allChildren
+		
+
+	def getAllChildrenOf(self, node = None):
+		if node == None:
+			return [self.root].append(self.getAllChildrenOf(self.root))
+		else:
+			result = []
+
+			for child in node.children:
+				result.append(self.getAllChildrenOf(child))
+
+			return result
 
 class Node:
 	
