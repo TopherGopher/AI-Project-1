@@ -98,57 +98,51 @@ def depthFirstSearch(problem):
 	# import pdb
 	# pdb.set_trace()
 
+	currentState = problem.getStartState()
+	
+	fringe = util.Stack()
 
-	result = recursiveDFS(problem, None, None)
-
-	result.reverse()
+	fringe.push((currentState, None, 0))
+	
+	result = recursiveDFS(problem, fringe, [])
 
 	return result
 
-	util.raiseNotDefined()
 
-def recursiveDFS(problem, state, visitedStates):
+
+def recursiveDFS(problem, fringe, visited):
 
 	# print "Problem: " + str(problem) + "  Path: " + str(path)
 
-	if visitedStates == None:
-		visitedStates = []
+	state = fringe.pop()
+	position = state[0]
 
-	if state == None:
-		currentState = problem.getStartState()
-	else:
-		currentState = state[0]
-	
-
-	if problem.isGoalState(currentState):
+	if problem.isGoalState(position):
 		return [state[1]]
 
-	successors = problem.getSuccessors(currentState)
+	if not position in visited:
 
-	if successors == None or len(successors) == 1 or (currentState in visitedStates):
-		return None
-	else:
+		visited.append(position)
 
-		result = None
+		successors = problem.getSuccessors(position)
 
-		visitedStates.append(currentState)
+		successors.reverse()
 
 		for successor in successors:
 
-			result = recursiveDFS(problem, successor, visitedStates)
+			fringe.push(successor)
+
+			result = recursiveDFS(problem, fringe, visited)
 		
 			if result:
-
-				if state:
-					result.append(state[1])
-
-				# print "Result: " + str(result)
+				if state[1]:
+					return [state[1]] + result
+				else:
+					return result
 
 				break
 
-		visitedStates.pop()
-
-	return result
+	return None
 
 
 def breadthFirstSearch(problem, startState=None):
