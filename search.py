@@ -151,12 +151,13 @@ def recursiveDFS(problem, state, visitedStates):
 	return result
 
 
-def breadthFirstSearch(problem):
+def breadthFirstSearch(problem, startState=None):
 
 	# import pdb
 	# pdb.set_trace()
 	
-	startState = problem.getStartState()
+	if startState == None:
+		startState = problem.getStartState()
 
 	result = []
 	visited = []
@@ -186,6 +187,7 @@ def breadthFirstSearch(problem):
 		(nextState, actions, depth) = fringe.pop()
 
 	return actions
+
 
 
 
