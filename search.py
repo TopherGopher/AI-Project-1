@@ -95,8 +95,8 @@ def depthFirstSearch(problem):
 	
 	"*** YOUR CODE HERE ***"
 
-	# import pdb
-	# pdb.set_trace()
+	import pdb
+	pdb.set_trace()
 
 
 	result = recursiveDFS(problem, None, None)
@@ -151,13 +151,15 @@ def recursiveDFS(problem, state, visitedStates):
 	return result
 
 
-def breadthFirstSearch(problem, startState=None):
+def breadthFirstSearch(problem):
 
 	# import pdb
 	# pdb.set_trace()
 	
-	if startState == None:
-		startState = problem.getStartState()
+	startState = problem.getStartState()
+
+	if type(startState[0]) == tuple:
+		return cornerBFS(problem)
 
 	result = []
 	visited = []
@@ -190,34 +192,74 @@ def breadthFirstSearch(problem, startState=None):
 
 
 
+def cornerBFS(problem):
 
+	# import pdb
+	# pdb.set_trace()
+
+	startState = problem.getStartState()
+
+	node = [(startState[0],'',0),  [], list(startState[1])[:], []]
+	depth = 0
+
+	fringe = util.PriorityQueue()
+		
+	while (len(node[2]) > 0):
+
+		state = node[0][0]
+		path = node[1]
+		goals = node[2]
+		explored = node[3]
+
+		if (problem.isGoalState(state) and state in goals and state not in explored):
+			explored = []
+			goals.remove(state)
+			fringe = util.PriorityQueue()
+
+		if len(goals) == 0:
+			break
+		
+		for successor in problem.getSuccessors(state):
+
+			if successor[0] not in explored:
+				tempPath = path[:] + [successor[1]]
+				tempGoals = goals[:]
+				tempExplored = explored[:] + [state]
+				fringe.push(([(successor),tempPath,tempGoals,tempExplored], depth+1), depth + 1)
+
+		if fringe.isEmpty():
+		  break
+
+		(node, depth) = fringe.pop()
+		
+	return node[1]
 
 	
 	
 
 
 def uniformCostSearch(problem):
-    #Search the node of least total cost first.
-    pq = util.PriorityQueue()
-    #Insert the root into the queue
-    root = ([], problem.getStartState(), 0)
-    pq.push(root, 0)
-    closed = []
-    #While the queue is not empty
-    while not pq.isEmpty():
-    #  Dequeue the maximum priority element from the queue
-        (actions, node, totalCost) = pq.pop()
+	#Search the node of least total cost first.
+	pq = util.PriorityQueue()
+	#Insert the root into the queue
+	root = ([], problem.getStartState(), 0)
+	pq.push(root, 0)
+	closed = []
+	#While the queue is not empty
+	while not pq.isEmpty():
+	#  Dequeue the maximum priority element from the queue
+		(actions, node, totalCost) = pq.pop()
 
-    #  If the path is ending in the goal state, print the path and exit
-        if problem.isGoalState(node):
-            return actions
-        if not node in closed:
-            closed.append(node)
-    #       Insert all the children of the dequeued element, with the cumulative costs as priority
-            successors = problem.getSuccessors(node)
-            for (child, action, cost) in successors:
-                if not child in closed:
-                    pq.push((actions + [action], child, cost+totalCost), totalCost+cost)
+	#  If the path is ending in the goal state, print the path and exit
+		if problem.isGoalState(node):
+			return actions
+		if not node in closed:
+			closed.append(node)
+	#       Insert all the children of the dequeued element, with the cumulative costs as priority
+			successors = problem.getSuccessors(node)
+			for (child, action, cost) in successors:
+				if not child in closed:
+					pq.push((actions + [action], child, cost+totalCost), totalCost+cost)
 
 def nullHeuristic(state, problem=None):
 	"""
@@ -227,30 +269,30 @@ def nullHeuristic(state, problem=None):
 	return 0
 
 def aStarSearch(problem, heuristic=nullHeuristic):
-    "Search the node that has the lowest combined cost and heuristic first."
-    import searchAgents
-    node = ((problem.getStartState(),'',0),[],0)
-    explored = []
-    path = []
-    fringe = []
-    fringe.append(node)
+	"Search the node that has the lowest combined cost and heuristic first."
+	import searchAgents
+	node = ((problem.getStartState(),'',0),[],0)
+	explored = []
+	path = []
+	fringe = []
+	fringe.append(node)
 
-    while not problem.isGoalState(node[0][0]):
-      
-        for i in problem.getSuccessors(node[0][0]):
-            if i[0] not in explored:
-                tmpPath = node[1][:]
-                tmpPath.append(i[1])
-                fringe.append(((i), tmpPath,node[2]+i[2]))
-                fringe = sorted(fringe, key=lambda fringe:( fringe[0][2] + searchAgents.manhattanHeuristic(fringe[0][0],problem)))
-              
-        explored.append(node[0][0])
-        fringe.remove(node)
-        if len(fringe) == 0:
-            break
-        node = fringe[0]
-      
-    return node[1]
+	while not problem.isGoalState(node[0][0]):
+	  
+		for i in problem.getSuccessors(node[0][0]):
+			if i[0] not in explored:
+				tmpPath = node[1][:]
+				tmpPath.append(i[1])
+				fringe.append(((i), tmpPath,node[2]+i[2]))
+				fringe = sorted(fringe, key=lambda fringe:( fringe[0][2] + searchAgents.manhattanHeuristic(fringe[0][0],problem)))
+			  
+		explored.append(node[0][0])
+		fringe.remove(node)
+		if len(fringe) == 0:
+			break
+		node = fringe[0]
+	  
+	return node[1]
 
 
 class Tree:

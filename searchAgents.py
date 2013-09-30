@@ -285,8 +285,8 @@ class CornersProblem(search.SearchProblem):
         # Please add any code here which you would like to use
         # in initializing the problem
         "*** YOUR CODE HERE ***"
-        import pdb
-        pdb.set_trace()
+        # import pdb
+        # pdb.set_trace()
 
     def getStartState(self):
         "Returns the start state (in your state space, not the full Pacman state space)"
@@ -360,9 +360,7 @@ def cornersHeuristic(state, problem):
 
     "*** YOUR CODE HERE ***"
 
-    actions = search.breadthFirstSearch(problem, state[0])
-
-    return len(actions)
+    return 0
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
