@@ -229,7 +229,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     path = []
     node = (problem.getStartState(), path, 0)
 
-    visited = [node[0]]
+    visited = []
 
     fringe = util.PriorityQueue()
 
@@ -246,16 +246,16 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     	else:
     		successors = copy.copy(problem.getSuccessors(position))
 
+    		visited.append(position)
+
     		for successor in successors:
 
     			newPosition = successor[0]
 
     			if not newPosition in visited:
-    				newPath = path[:] + [successor[1]]
+    				newPath = path + [successor[1]]
 
-    				# newCost = cost + heuristic(newPosition, problem) + successor[2]
-
-    				visited.append(newPosition)
+    				newCost = cost + heuristic(newPosition, problem) + successor[2]
 
     				fringe.push((newPosition, newPath, cost+successor[2]), cost+successor[2]+heuristic(newPosition, problem))
 
