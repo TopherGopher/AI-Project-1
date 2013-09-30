@@ -243,7 +243,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
     	if problem.isGoalState(position):
     		return path
-    	else:
+    	elif position not in visited:
     		successors = copy.copy(problem.getSuccessors(position))
 
     		visited.append(position)
@@ -254,9 +254,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
     			if not newPosition in visited:
     				newPath = path + [successor[1]]
-
-    				newCost = cost + heuristic(newPosition, problem) + successor[2]
-
+    				
     				fringe.push((newPosition, newPath, cost+successor[2]), cost+successor[2]+heuristic(newPosition, problem))
 
 
