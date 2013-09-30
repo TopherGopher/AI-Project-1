@@ -381,14 +381,14 @@ def cornersHeuristic(state, problem):
 
 	total = 0  
 
-	cornersToGo = list(self.visitedCorners)
+	cornersToGo = list(problem.corners)
 	visitedCorners = state[1]    
 	currentPosition = state[0]
 	lastPosition = None
 
 	for i in range (0,4):
 		if visitedCorners[i]:        
-			cornersToGo.remove(self.visitedCorners[i])
+			cornersToGo.remove(problem.corners[i])
 
 	while len(cornersToGo) > 0:    
 		closestDistance = None
@@ -396,7 +396,7 @@ def cornersHeuristic(state, problem):
 		
 		for corner in remainingCorners:
 
-			distance = mazeDistance(currentPosition, corner, self.startingGameState)
+			distance = mazeDistance(currentPosition, corner, problem.startingGameState)
 
 			if closestDistance == None or distance < closestDistance:
 				closestDistance = distance
@@ -404,10 +404,9 @@ def cornersHeuristic(state, problem):
 			
 		currentPosition = lastPosition
 		cornersToGo.remove(lastPosition)    
-		heuristicvalue += closestDistance    
-		
-	#print heuristicvalue
-	return heuristicvalue
+		total += closestDistance
+
+	return total
 
 class AStarCornersAgent(SearchAgent):
 	"A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
