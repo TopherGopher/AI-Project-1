@@ -239,7 +239,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
     	(position, path, cost) = fringe.pop()
 
-    	print "Pos:"+str(position)+" Cost:"+str(cost)+"\n"
+    	# print "Pos:"+str(position)+" Cost:"+str(cost)+"\n"
 
     	if problem.isGoalState(position):
     		return path
@@ -253,11 +253,11 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     			if not newPosition in visited:
     				newPath = path[:] + [successor[1]]
 
-    				newCost = cost + heuristic(newPosition, problem)
+    				# newCost = cost + heuristic(newPosition, problem) + successor[2]
 
     				visited.append(newPosition)
 
-    				fringe.push((newPosition, newPath, newCost), newCost)
+    				fringe.push((newPosition, newPath, cost+successor[2]), cost+successor[2]+heuristic(newPosition, problem))
 
 
 class Tree:
