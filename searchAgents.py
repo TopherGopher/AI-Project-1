@@ -381,18 +381,20 @@ def cornersHeuristic(state, problem):
 
 	total = 0  
 
-	cornersToGo = list(problem.corners)
-	visitedCorners = state[1]    
-	currentPosition = state[0]
-	lastPosition = None
+	cornersLeft = list(corners)
+	visitedCorners = state[1]
 
 	for i in range (0,4):
 		if visitedCorners[i]:        
-			cornersToGo.remove(problem.corners[i])
+			cornersLeft.remove(problem.corners[i])
 
-	while len(cornersToGo) > 0:    
+
+	currentPosition = state[0]
+	lastPosition = None
+
+	while len(cornersLeft) > 0:    
 		closestDistance = None
-		remainingCorners = cornersToGo[:]
+		remainingCorners = cornersLeft[:]
 		
 		for corner in remainingCorners:
 
@@ -403,7 +405,7 @@ def cornersHeuristic(state, problem):
 				lastPosition = corner
 			
 		currentPosition = lastPosition
-		cornersToGo.remove(lastPosition)    
+		cornersLeft.remove(lastPosition)    
 		total += closestDistance
 
 	return total
@@ -499,14 +501,14 @@ def foodHeuristic(state, problem):
 	"*** YOUR CODE HERE ***"
 
 	distances = []
-	listgrid = foodGrid.asList()
+	foodList = foodGrid.asList()
 
-	for food_coordinate in listgrid:
-		if problem.heuristicInfo.has_key((position, food_coordinate)):
-			distances.append(problem.heuristicInfo[(position, food_coordinate)])
+	for foodPosition in foodList:
+		if problem.heuristicInfo.has_key((position, foodPosition)):
+			distances.append(problem.heuristicInfo[(position, foodPosition)])
 		else:
-			value = mazeDistance(position, food_coordinate, problem.startingGameState)
-			problem.heuristicInfo[(position, food_coordinate)] = value
+			value = mazeDistance(position, foodPosition, problem.startingGameState)
+			problem.heuristicInfo[(position, foodPosition)] = value
 			distances.append(value)
 		
 	if not distances:
